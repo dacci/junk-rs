@@ -13,6 +13,6 @@ enum Args {
 fn main() -> Result<()> {
     let args = Args::parse();
     match args {
-        Args::Json(ref args) => json::main(args),
+        Args::Json(args) => json::main(args),
     }
 }

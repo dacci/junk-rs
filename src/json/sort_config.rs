@@ -12,7 +12,7 @@ pub struct Args {
     path: PathBuf,
 }
 
-pub fn main(args: &Args) -> Result<()> {
+pub fn main(args: Args) -> Result<()> {
     let f = File::open(&args.path)?;
     let config: BTreeMap<Key, Value> = serde_json::from_reader(f)?;
 
