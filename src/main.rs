@@ -5,12 +5,12 @@ use anyhow::Result;
 use clap::Parser;
 
 #[derive(Debug, clap::Parser)]
-#[clap(about, version)]
+#[command(about, version)]
 enum Args {
-    #[clap(subcommand)]
+    #[command(subcommand)]
     Json(json::Args),
 
-    #[clap(subcommand)]
+    #[command(subcommand)]
     Xml(xml::Args),
 }
 
