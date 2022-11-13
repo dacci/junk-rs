@@ -1,6 +1,6 @@
 [package]
 name = "junk"
-version = "0.2.0"
+version = "0.3.0"
 edition = "2021"
 description = "Tiny tiny utilities that nobody will be happy."
 license = "MIT"
@@ -9,7 +9,7 @@ license = "MIT"
 
 [dependencies]
 anyhow = "1.0.60"
-clap = { version = "3.2.16", features = ["derive"] }
+clap = { version = "4.0.23", features = ["derive"] }
 indexmap = "1.9.1"
 serde = { version = "1.0.142", features = ["derive"] }
 serde_json = "1.0.83"
@@ -19,3 +19,8 @@ yaserde_derive = "0.8.0"
 
 [dev-dependencies]
 serde_test = "1.0.142"
+
+[profile.release]
+codegen-units = 1
+lto = true
+strip = true
