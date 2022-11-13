@@ -1,4 +1,5 @@
 mod json;
+mod serde_helper;
 mod xml;
 
 use anyhow::Result;
