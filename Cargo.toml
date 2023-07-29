@@ -8,17 +8,17 @@ license = "MIT"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.60"
-clap = { version = "4.0.23", features = ["derive"] }
-indexmap = "1.9.1"
-serde = { version = "1.0.142", features = ["derive"] }
-serde_json = "1.0.83"
-xml-rs = "0.8.14"
+anyhow = "1.0.72"
+clap = { version = "4.3.19", features = ["derive"] }
+indexmap = "2.0.0"
+serde = { version = "1.0.178", features = ["derive"] }
+serde_json = "1.0.104"
+xml-rs = "0.8.16"
 yaserde = "0.8.0"
 yaserde_derive = "0.8.0"
 
 [dev-dependencies]
-serde_test = "1.0.142"
+serde_test = "1.0.176"
 
 [profile.release]
 codegen-units = 1
